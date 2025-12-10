@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medilab - Medical Center</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+
+</head>
+<body class="bg-gray-50">
+
+  <!-- Top Bar -->
+  <div class="bg-[var(--primary)] text-white py-2">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="flex flex-col md:flex-row md:space-x-8 space-y-2 md:space-y-0 mb-2 md:mb-0">
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-envelope text-sm"></i>
+            <span class="text-sm">contact@example.com</span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-phone text-sm"></i>
+            <span class="text-sm">+1 5589 55488 55</span>
+          </div>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="hover:text-gray-200 transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <!-- Logo --><!-- Mobile Menu Overlay -->
+<div id="mobileOverlay" class="mobile-overlay"></div>
+        <a href="#" class="text-2xl font-bold text-[var(--secondary)]">Medilab</a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="#hero" class="text-[var(--primary)] font-medium">Home</a>
+          <a href="#about" class="text-gray-700 hover:text-[var(--primary)] transition">About</a>
+          <a href="#services" class="text-gray-700 hover:text-[var(--primary)] transition">Services</a>
+          <a href="#departments" class="text-gray-700 hover:text-[var(--primary)] transition">Departments</a>
+          <a href="#doctors" class="text-gray-700 hover:text-[var(--primary)] transition">Doctors</a>
+          <div class="relative group">
+            <button class="text-gray-700 hover:text-[var(--primary)] transition flex items-center space-x-1">
+              <span>Dropdown</span>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[var(--primary)]">Dropdown 1</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[var(--primary)]">Dropdown 2</a>
+              <a href="#" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-[var(--primary)]">Dropdown 3</a>
+            </div>
+          </div>
+          <a href="#contact" class="text-gray-700 hover:text-[var(--primary)] transition">Contact</a>
+          <a href="#appointment" class="btn-primary">Make an Appointment</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden text-gray-700 text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="p-6">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-xl font-bold text-[var(--secondary)]">Medilab</span>
+        <button id="closeMobileMenu" class="text-2xl text-gray-700">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="space-y-4">
+        <a href="#hero" class="block text-[var(--primary)] font-medium py-2">Home</a>
+        <a href="#about" class="block text-gray-700 py-2">About</a>
+        <a href="#services" class="block text-gray-700 py-2">Services</a>
+        <a href="#departments" class="block text-gray-700 py-2">Departments</a>
+        <a href="#doctors" class="block text-gray-700 py-2">Doctors</a>
+        <a href="#contact" class="block text-gray-700 py-2">Contact</a>
+        <a href="#appointment" class="btn-primary inline-block mt-4">Make an Appointment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative min-h-[90vh] flex items-center" style="background: linear-gradient(rgba(44, 73, 100, 0.9), rgba(44, 73, 100, 0.9)), url('./image/hero-bg.jpg'); background-size: cover; background-position: center;">
+    <div class="container mx-auto px-4 py-20">
+      <div class="text-center text-white mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">WELCOME TO MEDILAB</h2>
+        <p class="text-xl">We are team of talented designers making websites with modern technologies</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Why Choose Medilab -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-2xl   font-bold text-[var(--secondary)] mb-4">Why Choose Medilab?</h3>
+          <p class="text-gray-600 mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit.
+          </p>
+          <a href="#about" class="text-[var(--primary)] font-medium hover:text-[var(--primary-dark)] transition flex items-center space-x-2">
+            <span>Learn More</span>
+            <i class="fas fa-chevron-right"></i>
+          </a>
+        </div>
+        
+        <!-- Features -->
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="icon-box bg-white p-6 rounded-lg">
+            <div class="text-[var(--primary)] text-3xl mb-4">
+              <i class="fas fa-clipboard-list"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-800 mb-2">Corporis voluptates officia eiusmod</h4>
+            <p class="text-gray-600">Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+          </div>
+          
+          <div class="icon-box bg-white p-6 rounded-lg">
+            <div class="text-[var(--primary)] text-3xl mb-4">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-800 mb-2">Ullamco laboris ladore pan</h4>
+            <p class="text-gray-600">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+          </div>
+          
+          <div class="icon-box bg-white p-6 rounded-lg">
+            <div class="text-[var(--primary)] text-3xl mb-4">
+              <i class="fas fa-boxes"></i>
+            </div>
+            <h4 class="text-lg font-bold text-gray-800 mb-2">Labore consequatur incidid dolore</h4>
+            <p class="text-gray-600">Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Image with Play Button -->
+        <div class="relative">
+          <div class="bg-gray-300 h-100 rounded-lg">
+            <video src="Learn_CSS_In_Arabic_2021_-__13_-_Grouping_Multiple_Selectors(720P_HD).mp4" controls muted ></video>
+          </div>
+        
+        </div>
+        
+        <!-- Content -->
+        <div>
+          <h3 class="section-title text-3xl font-bold text-[var(--secondary)]">About Us</h3>
+          <p class="text-gray-600 mb-8">
+            Dolor iure expedita id fuga asperiores qui sunt consequatur minima. Quidem voluptas deleniti. Sit quia molestiae quia quas qui magnam itaque veritatis dolores.
+          </p>
+          
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div class="text-[var(--primary)] text-xl mt-1">
+                <i class="fas fa-vial-circle-check"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-gray-800">Ullamco laboris nisi ut aliquip consequat</h5>
+                <p class="text-gray-600">Magni facilis facilis repellendus cum excepturi quaerat praesentium libre trade</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="text-[var(--primary)] text-xl mt-1">
+                <i class="fas fa-pump-medical"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-gray-800">Magnam soluta odio exercitationem reprehenderi</h5>
+                <p class="text-gray-600">Quo totam dolorum at pariatur aut distinctio dolorum laudantium illo direna pasata redi</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start space-x-4">
+              <div class="text-[var(--primary)] text-xl mt-1">
+                <i class="fas fa-heart-circle-xmark"></i>
+              </div>
+              <div>
+                <h5 class="font-bold text-gray-800">Voluptatem et qui exercitationem</h5>
+                <p class="text-gray-600">Et velit et eos maiores est tempora et quos dolorem autem tempora incidunt maxime veniam</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section id="stats" class="py-20 bg-[var(--light)]">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="text-center p-8 rounded-2xl bg-white relative
+            shadow-[0_10px_40px_rgba(0,0,0,0.1)]
+            shadow-inner shadow-[0_0_20px_rgba(25,119,204,0.15)_inset]
+            pt-12"> 
+  
+  <!-- الأيقونة خارج الصندوق -->
+  <div class="absolute -top-6 left-1/2 transform -translate-x-1/2
+              bg-white p-4 rounded-full 
+              shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+              border border-gray-100">
+    <div class="text-[var(--primary)] text-3xl">
+      <i class="fas fa-user-doctor"></i>
+    </div>
+  </div>
+  
+  <div class="stats-counter mb-2 mt-4" data-target="85">0</div> <!-- إضافة margin-top -->
+  <p class="text-gray-600">Doctors</p>
+</div>
+        
+     <div class="text-center p-8 rounded-2xl bg-white relative
+            shadow-[0_10px_40px_rgba(0,0,0,0.1)]
+            shadow-inner shadow-[0_0_20px_rgba(25,119,204,0.15)_inset]
+            pt-16">
+  
+  <!-- الأيقونة العائمة -->
+  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2
+              bg-white p-4 rounded-full 
+              shadow-lg border border-gray-100">
+    <div class="text-[var(--primary)] text-3xl">
+      <i class="fas fa-hospital"></i>
+    </div>
+  </div>
+  
+  <div class="stats-counter mb-2 mt-2" data-target="18">0</div>
+  <p class="text-gray-600">Departments</p>
+</div>
+      <div class="text-center p-8 rounded-2xl bg-white relative
+            shadow-[0_10px_40px_rgba(0,0,0,0.1)]
+            shadow-inner shadow-[0_0_20px_rgba(59,130,246,0.1)_inset]
+            pt-16">
+  
+  <!-- الأيقونة العائمة -->
+  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2
+              bg-white p-4 rounded-full 
+              shadow-lg border border-gray-100">
+    <div class="text-[var(--primary)] text-3xl">
+      <i class="fas fa-flask"></i>
+    </div>
+  </div>
+  
+  <div class="stats-counter mb-2 mt-2" data-target="12">0</div>
+  <p class="text-gray-600">Research Labs</p>
+</div>
+        
+  <div class="text-center p-8 rounded-2xl bg-white relative
+            shadow-[0_10px_40px_rgba(0,0,0,0.1)]
+            shadow-inner shadow-[0_0_20px_rgba(245,158,11,0.15)_inset]
+            pt-16">
+  
+  <!-- الأيقونة العائمة -->
+  <div class="absolute -top-8 left-1/2 transform -translate-x-1/2
+              bg-white p-4 rounded-full 
+              shadow-lg border border-gray-100">
+    <div class="text-yellow-500 text-3xl">
+      <i class="fas fa-award"></i>
+    </div>
+  </div>
+  
+  <div class="stats-counter mb-2 mt-2" data-target="150">0</div>
+  <p class="text-gray-600">Awards</p>
+</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-title section-title-center text-3xl font-bold text-[var(--secondary)] inline-block">Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="service-card p-6 rounded-lg">
+          <div class="text-[var(--primary)] text-3xl mb-4">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Nesciunt Mete</h3>
+          <p class="text-gray-600">Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+        </div>
+        
+        <div class="service-card p-6 rounded-lg">
+          <div class="text-[var(--primary)] text-3xl mb-4">
+            <i class="fas fa-pills"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Eosle Commodi</h3>
+          <p class="text-gray-600">Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+        </div>
+        
+        <div class="service-card p-6 rounded-lg">
+          <div class="text-[var(--primary)] text-3xl mb-4">
+            <i class="fas fa-hospital-user"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Ledo Markt</h3>
+          <p class="text-gray-600">Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+        </div>
+        
+        <div class="service-card p-6 rounded-lg">
+          <div class="text-[var(--primary)] text-3xl mb-4">
+            <i class="fas fa-dna"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Asperiores Commodit</h3>
+          <p class="text-gray-600">Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+        </div>
+        
+        <div class="service-card p-6 rounded-lg">
+          <div class="text-[var(--primary)] text-3xl mb-4">
+            <i class="fas fa-wheelchair"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Velit Doloremque</h3>
+          <p class="text-gray-600">Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+        </div>
+        
+        <div class="service-card p-6 rounded-lg">
+          <div class="text-[var(--primary)] text-3xl mb-4">
+            <i class="fas fa-notes-medical"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">Dolori Architecto</h3>
+          <p class="text-gray-600">Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment Section -->
+  <section id="appointment" class="py-20 bg-[var(--light)]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-title section-title-center text-3xl font-bold text-[var(--secondary)] inline-block">Appointment</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <form class="space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <input type="text" placeholder="Your Name" class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+            <input type="email" placeholder="Your Email" class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+            <input type="tel" placeholder="Your Phone" class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <input type="datetime-local" class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+            
+            <select class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+              <option value="">Select Department</option>
+              <option value="Department 1">Department 1</option>
+              <option value="Department 2">Department 2</option>
+              <option value="Department 3">Department 3</option>
+            </select>
+            
+            <select class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+              <option value="">Select Doctor</option>
+              <option value="Doctor 1">Doctor 1</option>
+              <option value="Doctor 2">Doctor 2</option>
+              <option value="Doctor 3">Doctor 3</option>
+            </select>
+          </div>
+          
+          <textarea rows="5" placeholder="Message (Optional)" class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)]"></textarea>
+          
+          <div class="text-center">
+            <button type="submit" class="btn-primary">Make an Appointment</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Departments Section -->
+  <section id="departments" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-title section-title-center text-3xl font-bold text-[var(--secondary)] inline-block">Departments</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <!-- Tabs Navigation -->
+        <div class="lg:col-span-1">
+          <div class="tab-nav p-2">
+            <div class="tab-nav-item active " data-tab="tab1" >Cardiology</div>
+            <div class="tab-nav-item" data-tab="tab2">Neurology</div>
+            <div class="tab-nav-item" data-tab="tab3">Hepatology</div>
+            <div class="tab-nav-item" data-tab="tab4">Pediatrics</div>
+            <div class="tab-nav-item" data-tab="tab5">Eye Care</div>
+          </div>
+        </div>
+        
+        <!-- Tab Content -->
+        <div class="lg:col-span-3">
+          <!-- Tab 1 -->
+          <div id="tab1" class="tab-content active">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Cardiology</h3>
+                <p class="italic text-gray-600 mb-4">Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <p class="text-gray-600">Et nobis maiores eius. Voluptatibus ut enim blanditiis atque harum sint. Laborum eos ipsum ipsa odit magni. Incidunt hic ut molestiae aut qui.</p>
+              </div>
+              <div>
+               
+                  <img src="image/departments-1.jpg" alt="" class="w-80">
+             
+              </div>
+            </div>
+          </div>
+          
+          <!-- Tab 2 -->
+          <div id="tab2" class="tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Neurology</h3>
+                <p class="italic text-gray-600 mb-4">Ea ipsum voluptatem consequatur quis est. Illum error ullam omnis quia et reiciendis sunt sunt est.</p>
+                <p class="text-gray-600">Non aliquid repellendus itaque accusamus eius et velit ipsa voluptates. Optio nesciunt eaque beatae accusamus lerode pakto madirna desera vafle de nideran pal.</p>
+              </div>
+              <div>
+                  <img src="image/departments-2.jpg" alt="" class="w-80">
+              </div>
+            </div>
+          </div>
+           <!-- Tab 3 -->
+           <div id="tab3" class="tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Hepatology</h3>
+                <p class="italic text-gray-600 mb-4">Eos voluptatibus quo. Odio similique illum id quidem non enim fuga. Qui natus non sunt dicta dolor et. In asperiores velit quaerat perferendis aut</p>
+                <p class="text-gray-600">Iure officiis odit rerum. Harum sequi eum illum corrupti culpa veritatis quisquam. Neque necessitatibus illo rerum eum ut. Commodi ipsam minima molestiae sed laboriosam a iste odio. Earum odit nesciunt fugiat sit ullam. Soluta et harum voluptatem optio quae</p>
+              </div>
+              <div>
+                       <img src="image/departments-3.jpg" alt="" class="w-80">
+              </div>
+            </div>
+          </div>
+           <!-- Tab 4 -->
+            
+           <div id="tab4" class="tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Pediatrics</h3>
+                <p class="italic text-gray-600 mb-4">Totam aperiam accusamus. Repellat consequuntur iure voluptas iure porro quis delectus</p>
+                <p class="text-gray-600">Eaque consequuntur consequuntur libero expedita in voluptas. Nostrum ipsam necessitatibus aliquam fugiat debitis quis velit. Eum ex maxime error in consequatur corporis atque. Eligendi asperiores sed qui veritatis aperiam quia a laborum inventore</p>
+              </div>
+              <div>
+            <img src="image/departments-4.jpg" alt="" class="w-80">
+              </div>
+            </div>
+          </div>
+           <!-- Tab 5 -->
+           <div id="tab5" class="tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Eye Care</h3>
+                <p class="italic text-gray-600 mb-4">Omnis blanditiis saepe eos autem qui sunt debitis porro quia.</p>
+                <p class="text-gray-600">Exercitationem nostrum omnis. Ut reiciendis repudiandae minus. Omnis recusandae ut non quam ut quod eius qui. Ipsum quia odit vero atque qui quibusdam amet. Occaecati sed est sint aut vitae molestiae voluptate vel</p>
+              </div>
+              <div>
+                   <img src="image/departments-5.jpg" alt="" class="w-80">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+         
+          
+          <!-- Additional tabs would be similar -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="py-20 bg-[var(--light)]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-title section-title-center text-3xl font-bold text-[var(--secondary)] inline-block">Doctors</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Doctor 1 -->
+        <div class="team-member">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3">
+            <div class="h-48 md:h-full bg-[url('image/doctors/doctors-1.jpg')] w-48 bg-cover bg-center rounded-full"></div>
+            </div>
+            <div class="md:w-2/3 p-6">
+              <h4 class="text-xl font-bold text-gray-800">Walter White</h4>
+              <p class="text-[var(--primary)] mb-3">Chief Medical Officer</p>
+              <p class="text-gray-600 mb-4">Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Doctor 2 -->
+        <div class="team-member">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3">
+            <div class="h-48 md:h-full bg-[url('image/doctors/doctors-2.jpg')] w-48 bg-cover bg-center rounded-full"></div>
+            </div>
+            <div class="md:w-2/3 p-6">
+              <h4 class="text-xl font-bold text-gray-800">Sarah Jhonson</h4>
+              <p class="text-[var(--primary)] mb-3">Anesthesiologist</p>
+              <p class="text-gray-600 mb-4">Aut maiores voluptates amet et quis praesentium qui senda para</p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Doctor 3 -->
+        <div class="team-member">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3">
+              <div class="h-48 md:h-full bg-[url('image/doctors/doctors-3.jpg')] w-48 bg-cover bg-center rounded-full"></div>
+            </div>
+            <div class="md:w-2/3 p-6">
+              <h4 class="text-xl font-bold text-gray-800">William Anderson</h4>
+              <p class="text-[var(--primary)] mb-3">Cardiology</p>
+              <p class="text-gray-600 mb-4">Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Doctor 4 -->
+        <div class="team-member">
+          <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3">
+              <div class="h-48 md:h-full bg-[url('image/doctors/doctors-4.jpg')] w-48 bg-cover bg-center rounded-full"></div>
+            </div>
+            <div class="md:w-2/3 p-6">
+              <h4 class="text-xl font-bold text-gray-800">Amanda Jepson</h4>
+              <p class="text-[var(--primary)] mb-3">Neurosurgeon</p>
+              <p class="text-gray-600 mb-4">Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+              <div class="flex space-x-3">
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-gray-400 hover:text-[var(--primary)]"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-title section-title-center text-3xl font-bold text-[var(--secondary)] inline-block">Frequently Asked Questions</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+      <div class="max-w-3xl mx-auto">
+        <!-- FAQ Item 1 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Non consectetur a erat nam at lectus urna duis?</span>
+          
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p class="text-white">Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Feugiat scelerisque varius morbi enim nunc faucibus?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p class="text-white">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Dolor sit amet consectetur adipiscing elit pellentesque?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p class="text-white">Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p class="text-white">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Tempus quam pellentesque nec nam aliquam sem et tortor?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p class="text-white">Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan.</p>
+          </div>
+        </div>
+        
+        <!-- FAQ Item 6 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Perspiciatis quod quo quos nulla quo illum ullam?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            <p class="text-white">Enim ea facilis quaerat voluptas quidem et dolorem. Quis et consequatur non sed in suscipit sequi. Distinctio ipsam dolore et.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="py-20 bg-[var(--light)]">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-3xl font-bold text-[var(--secondary)] mb-6">Testimonials</h3>
+          <p class="text-gray-600">
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          </p>
+        </div>
+        
+        <div>
+          <!-- Testimonial Slider Container -->
+          <div class="relative overflow-hidden">
+            <div class="testimonial-container flex transition-transform duration-500" id="testimonialContainer">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-slide min-w-full">
+                <div class="flex items-start mb-6">
+              <img src="image/testimonials/testimonials-1.jpg" alt="logo" class="w-16 h-16 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-800">Saul Goodman</h4>
+                    <p class="text-gray-600">Ceo & Founder</p>
+                    <div class="flex text-yellow-400 mt-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  "Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et."
+                </p>
+              </div>
+              
+              <!-- Testimonial 2 -->
+              <div class="testimonial-slide min-w-full">
+                <div class="flex items-start mb-6">
+                <img src="image\testimonials\testimonials-2.jpg" alt="logo" class="w-16 h-16 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-800">Sara Wilsson</h4>
+                    <p class="text-gray-600">Designer</p>
+                    <div class="flex text-yellow-400 mt-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster."
+                </p>
+              </div>
+              
+              <!-- Testimonial 3 -->
+              <div class="testimonial-slide min-w-full">
+                <div class="flex items-start mb-6">
+              <img src="image\testimonials\testimonials-3.jpg" alt="logo" class="w-16 h-16 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-800">Jena Karlis</h4>
+                    <p class="text-gray-600">Store Owner</p>
+                    <div class="flex text-yellow-400 mt-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet."
+                </p>
+              </div>
+               <!-- Testimonial 4 -->
+              <div class="testimonial-slide min-w-full">
+                <div class="flex items-start mb-6">
+              <img src="image\testimonials\testimonials-4.jpg" alt="logo" class="w-16 h-16 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-800">Jena Karlis</h4>
+                    <p class="text-gray-600">Store Owner</p>
+                    <div class="flex text-yellow-400 mt-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet."
+                </p>
+              </div>
+               <!-- Testimonial 5 -->
+              <div class="testimonial-slide min-w-full">
+                <div class="flex items-start mb-6">
+              <img src="image\testimonials\testimonials-5.jpg" alt="logo" class="w-16 h-16 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-800">Jena Karlis</h4>
+                    <p class="text-gray-600">Store Owner</p>
+                    <div class="flex text-yellow-400 mt-1">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-600 italic">
+                  "Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet."
+                </p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-title section-title-center text-3xl font-bold text-[var(--secondary)] inline-block">Gallery</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="gallery-item">
+     <img src="image\gallery\gallery-1.jpg" alt="logo">
+        </div>
+        <div class="gallery-item">
+          <img src="image\gallery\gallery-2.jpg" alt="logo">
+        </div>
+        <div class="gallery-item">
+              <img src="image\gallery\gallery-3.jpg" alt="logo">
+        </div>
+        <div class="gallery-item">
+              <img src="image\gallery\gallery-4.jpg" alt="logo">
+        </div>
+        <div class="gallery-item">
+              <img src="image\gallery\gallery-5.jpg" alt="logo">
+        </div>
+        <div class="gallery-item">
+              <img src="image\gallery\gallery-6.jpg" alt="logo">
+        </div>
+        <div class="gallery-item">
+         <img src="image\gallery\gallery-7.jpg" alt="logo">
+        </div>
+        <div class="gallery-item">
+           <img src="image\gallery\gallery-8.jpg" alt="logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-[var(--light)]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-title section-title-center text-3xl font-bold text-[var(--secondary)] inline-block">Contact</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+      
+      <!-- Map -->
+   <div class="mb-12 rounded-lg overflow-hidden shadow-lg">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387190.2799144696!2d-74.25987536872045!3d40.69714941965573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c250b9de5f0a1f%3A0x4b98ff603f67f891!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1600000000000!5m2!1sen!2s" 
+    width="100%" 
+    height="256" 
+    style="border:0;" 
+    allowfullscreen="" 
+    loading="lazy">
+  </iframe>
+</div>
+
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Contact Info -->
+        <div class="space-y-8">
+          <div class="flex items-start space-x-4">
+            <div class="text-[var(--primary)] text-2xl mt-1">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Location</h3>
+              <p class="text-gray-600">A108 Adam Street, New York, NY 535022</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-4">
+            <div class="text-[var(--primary)] text-2xl mt-1">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Call Us</h3>
+              <p class="text-gray-600">+1 5589 55488 55</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-4">
+            <div class="text-[var(--primary)] text-2xl mt-1">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800 mb-2">Email Us</h3>
+              <p class="text-gray-600">info@example.com</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="lg:col-span-2">
+          <div class="bg-white p-8 rounded-lg shadow-lg">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Your Name" class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+                <input type="email" placeholder="Your Email" class="border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)] w-full">
+              </div>
+              
+              <input type="text" placeholder="Subject" class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)]">
+              
+              <textarea rows="5" placeholder="Message" class="w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:border-[var(--primary)]"></textarea>
+              
+              <div class="text-center">
+                <button type="submit" class="btn-primary">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--secondary)] text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-2xl font-bold mb-6">Medilab</h3>
+          <div class="space-y-3 text-gray-300">
+            <p>A108 Adam Street</p>
+            <p>New York, NY 535022</p>
+            <p><strong>Phone:</strong> +1 5589 55488 55</p>
+            <p><strong>Email:</strong> info@example.com</p>
+          </div>
+          <div class="flex space-x-4 mt-6">
+            <a href="#" class="hover:text-[var(--primary)] transition"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover:text-[var(--primary)] transition"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-[var(--primary)] transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-[var(--primary)] transition"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Useful Links</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li><a href="#" class="hover:text-white transition">Home</a></li>
+            <li><a href="#" class="hover:text-white transition">About us</a></li>
+            <li><a href="#" class="hover:text-white transition">Services</a></li>
+            <li><a href="#" class="hover:text-white transition">Terms of service</a></li>
+            <li><a href="#" class="hover:text-white transition">Privacy policy</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Our Services</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li><a href="#" class="hover:text-white transition">Web Design</a></li>
+            <li><a href="#" class="hover:text-white transition">Web Development</a></li>
+            <li><a href="#" class="hover:text-white transition">Product Management</a></li>
+            <li><a href="#" class="hover:text-white transition">Marketing</a></li>
+            <li><a href="#" class="hover:text-white transition">Graphic Design</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Hic solutasetp</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li><a href="#" class="hover:text-white transition">Molestiae accusamus iure</a></li>
+            <li><a href="#" class="hover:text-white transition">Excepturi dignissimos</a></li>
+            <li><a href="#" class="hover:text-white transition">Suscipit distinctio</a></li>
+            <li><a href="#" class="hover:text-white transition">Dilecta</a></li>
+            <li><a href="#" class="hover:text-white transition">Sit quas consectetur</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 5 -->
+        <div>
+          <h4 class="text-xl font-bold mb-6">Nobis illum</h4>
+          <ul class="space-y-3 text-gray-300">
+            <li><a href="#" class="hover:text-white transition">Ipsam</a></li>
+            <li><a href="#" class="hover:text-white transition">Laudantium dolorum</a></li>
+            <li><a href="#" class="hover:text-white transition">Dinera</a></li>
+            <li><a href="#" class="hover:text-white transition">Trodelas</a></li>
+            <li><a href="#" class="hover:text-white transition">Flexo</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+        <p>&copy; Copyright <strong class="text-white">Medilab</strong>. All Rights Reserved</p>
+       
+      </div>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
